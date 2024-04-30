@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tomigatchiGreeting"
+        android:layout_width="372dp"
+        android:layout_height="83dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/caveat"
+        android:text="Welcome to Rocky, the tomigatchi virtual app!"
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="34sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="46dp" />
+
+    <ImageView
+        android:id="@+id/welcomeImage"
+        android:layout_width="match_parent"
+        android:layout_height="359dp"
+        app:srcCompat="@drawable/corgi_pixel_art" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="51dp" />
+
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="244dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#FF9800"
+        android:text="Get started"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartPage">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="410dp"
+        android:layout_height="333dp"
+        android:layout_marginStart="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/playButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/corgi_pixel_art" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#FF9800"
+        android:text="Play"
+        app:layout_constraintBottom_toTopOf="@+id/happinessTag"
+        app:layout_constraintEnd_toStartOf="@+id/feedButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <Button
+        android:id="@+id/BathButton"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="45dp"
+        android:backgroundTint="#FF9800"
+        android:text="Bathe"
+        app:layout_constraintBottom_toTopOf="@+id/happinessMeter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/feedButton"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <Button
+        android:id="@+id/feedButton"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#FF9800"
+        android:text="Feed"
+        app:layout_constraintBottom_toTopOf="@+id/happinessTag"
+        app:layout_constraintEnd_toStartOf="@+id/BathButton"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <TextView
+        android:id="@+id/happinessTag"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Happiness"
+        app:layout_constraintBottom_toTopOf="@+id/hungerTag"
+        app:layout_constraintEnd_toStartOf="@+id/happinessMeter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
+    <TextView
+        android:id="@+id/cleanlinessTag"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="108dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Cleanliness"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cleanlinessMeter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hungerTag" />
+
+    <TextView
+        android:id="@+id/hungerTag"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Hunger"
+        app:layout_constraintBottom_toTopOf="@+id/cleanlinessTag"
+        app:layout_constraintEnd_toStartOf="@+id/hungerMeter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happinessTag" />
+
+    <TextView
+        android:id="@+id/cleanlinessMeter"
+        android:layout_width="60dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="115dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cleanlinessTag"
+        app:layout_constraintTop_toBottomOf="@+id/hungerMeter" />
+
+    <TextView
+        android:id="@+id/hungerMeter"
+        android:layout_width="60dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="26dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/cleanlinessMeter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hungerTag"
+        app:layout_constraintTop_toBottomOf="@+id/happinessMeter" />
+
+    <TextView
+        android:id="@+id/happinessMeter"
+        android:layout_width="60dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="28dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/hungerMeter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/happinessTag"
+        app:layout_constraintTop_toBottomOf="@+id/BathButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
