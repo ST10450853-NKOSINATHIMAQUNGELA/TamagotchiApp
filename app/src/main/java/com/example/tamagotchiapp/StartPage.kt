@@ -28,11 +28,14 @@ class StartPage : AppCompatActivity() {
 
         val bathButton = findViewById<Button>(R.id.BathButton)
 
-        var happinessMeter = findViewById<TextView>(R.id.happinessMeter)
+        val happinessMeter = findViewById<TextView>(R.id.happinessMeter)
+        var happinessNumber = happinessMeter.toString().toInt()
 
-        var hungerMeter = findViewById<TextView>(R.id.hungerMeter)
+        val hungerMeter = findViewById<TextView>(R.id.hungerMeter)
+        var hungerNumber = hungerMeter.toString().toInt()
 
-        var cleanlinessMeter = findViewById<TextView>(R.id.cleanlinessMeter)
+        val cleanlinessMeter = findViewById<TextView>(R.id.cleanlinessMeter)
+        var cleanlinessNumber = cleanlinessMeter.toString().toInt()
 
         playButton?.setOnClickListener {
             imageView.setImageResource(R.drawable.dog_playing)
