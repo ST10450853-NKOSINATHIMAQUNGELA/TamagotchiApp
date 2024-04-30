@@ -3,6 +3,7 @@ package com.example.tamagotchiapp
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,6 +27,25 @@ class StartPage : AppCompatActivity() {
         val feedButton = findViewById<Button>(R.id.feedButton)
 
         val bathButton = findViewById<Button>(R.id.BathButton)
+
+        var happinessMeter = findViewById<TextView>(R.id.happinessMeter)
+
+        var hungerMeter = findViewById<TextView>(R.id.hungerMeter)
+
+        var cleanlinessMeter = findViewById<TextView>(R.id.cleanlinessMeter)
+
+        playButton?.setOnClickListener {
+            imageView.setImageResource(R.drawable.dog_playing)
+
+        }
+
+        feedButton?.setOnClickListener {
+            imageView.setImageResource(R.drawable.dog_eating)
+        }
+
+        bathButton?.setOnClickListener {
+            imageView.setImageResource(R.drawable.dog_bathing)
+        }
 
 
 
